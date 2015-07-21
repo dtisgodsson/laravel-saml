@@ -6,5 +6,5 @@
  * Time: 00:25
  */
 
-Route::get('login', 'SamlController@login');
-Route::get('logout', 'SamlController@logout');
+Route::get(Config::get('laravel-saml::saml.login_route', 'login'), 'SamlController@login');
+Route::get(Config::get('laravel-saml::saml.logout_route', 'logout'), 'SamlController@logout');
